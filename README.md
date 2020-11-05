@@ -29,7 +29,7 @@ Data Analysis  <br>
 - [Team](#Team)
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Observed Trends](#trends)
+- [Bonus](#bonus)
 - [Acknowledgments](#acknowledgement)
 
 
@@ -56,29 +56,19 @@ Created tables in the correct order to handle foreign keys.Importe each CSV file
 
 #### ERD - Diagram <br>
 <br>
-![ERD Diagram](EmployeeSQL/QuickDBD.PNG)
+![ERD Diagram](EmployeeSQL/QuickDBD.PNG)<br > 
 
+ERD Diagram establishing the realtionship between the tables. <br >
 
-## ✍️ Observed Trends <a name = "trends"></a>
-
-![Happiness Ranking 2015-2019](Output/ranking.png)
-* The world’s happiest countries are primarily in North Western Europe, North America, and Australia & New Zealand. 
-
-* Economy (GDP per capita) is the most important factor in evaluating a country’s happiness.
-
-
-![Correaltion_Heatmap](Output/2019_Heatmap.png)
-
-
-### Bonus Part -Importing the SQL database into Pandas.
+## Bonus Part -Importing the SQL database into Pandas. <a name = "bonus"></a>
 
 ![Comparison](EmployeeSQL/avgsallarytitle.png) <br>
 
-histogram to visualize the most common salary ranges for employees.<br>
+Histogram to visualize the most common salary ranges for employees.<br>
 
 ![Suicid Rate Comparison Aus vs Finland](EmployeeSQL/salarydist.png) <br>
 
-Create a bar chart of average salary by title. <br>
+A bar chart of average salary by title. <br>
 
 ### Epilogue 
 You look down at your badge to see that your employee ID number is 499942.
