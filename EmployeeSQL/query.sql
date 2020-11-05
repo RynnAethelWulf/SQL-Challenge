@@ -7,8 +7,10 @@ order by e.emp_no
 
 
 --2) List first name, last name, and hire date for employees who were hired in 1986.
+
 --Setting Datestlye to month-day-year
 SET DateStyle TO MDY;
+--creating view
 create view employees_view as
 select first_name,last_name,hire_date::date as hire_date
 from employees
@@ -20,10 +22,6 @@ order by first_name,last_name
 
 
 --3) List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
-create view manager_list as
-
-select * from employees where emp_title_id like 'm%'
-
 select e.emp_no,e.first_name,e.last_name,d.dept_name,d.dept_no
 from employees e,dept_manager dm,departments d
 where dm.emp_no = e.emp_no and dm.dept_no = d.dept_no
