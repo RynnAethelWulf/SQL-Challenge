@@ -57,13 +57,15 @@ ERD Diagram establishing the realtionship between the tables. <br>
 
 ## Bonus Part -Importing the SQL database into Pandas. <a name = "bonus"></a>
 
-![Comparison](EmployeeSQL/avgsallarytitle.png) <br>
+A bar chart of average salary by title. <br>
+
+![Comparison Hist](EmployeeSQL/avgsallarytitle.png) <br>
 
 Histogram to visualize the most common salary ranges for employees.<br>
 
-![Suicid Rate Comparison Aus vs Finland](EmployeeSQL/salarydist.png) <br>
+![Salary](EmployeeSQL/salarydist.png) <br>
 
-A bar chart of average salary by title. <br>
+
 
 ### Epilogue 
 I look down at my badge to see that my employee ID number is 499942.
