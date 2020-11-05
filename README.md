@@ -3,13 +3,12 @@
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">EDA: Analysis of Happiness Score of the Countries</h3>
+<h3 align="center">Data Engineering with postgreSQL and Pandas </h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -17,11 +16,7 @@
 ---
 
 <p align="center">  A project on design the  of ERD(Entity-Relationship-Diagram) and tables to hold data from the CSVs, importing the CSVs into a SQL database, and analysisng the data. In other words, I will perform:
-
-Data Engineering  <br>
-&
-Data Analysis  <br>
-    <br> 
+  
 </p>
 
 ## 📝 Table of Contents
@@ -56,7 +51,7 @@ Created tables in the correct order to handle foreign keys.Importe each CSV file
 
 #### ERD - Diagram <br>
 <br>
-![ERD Diagram](EmployeeSQL/QuickDBD.PNG)<br > 
+![Comparison](EmployeeSQL/QuickDBD.PNG) <br > 
 
 ERD Diagram establishing the realtionship between the tables. <br >
 
