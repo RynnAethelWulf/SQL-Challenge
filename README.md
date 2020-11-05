@@ -50,10 +50,10 @@ Created tables in the correct order to handle foreign keys.Importe each CSV file
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 #### ERD - Diagram <br>
-<br>
-![Comparison](EmployeeSQL/QuickDBD.PNG) <br > 
 
-ERD Diagram establishing the realtionship between the tables. <br >
+![Comparison](EmployeeSQL/QuickDBD.PNG) <br>
+
+ERD Diagram establishing the realtionship between the tables. <br>
 
 ## Bonus Part -Importing the SQL database into Pandas. <a name = "bonus"></a>
 
