@@ -3,13 +3,12 @@
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">EDA: Analysis of Happiness Score of the Countries</h3>
+<h3 align="center">Data Engineering with postgreSQL and Pandas </h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -17,11 +16,7 @@
 ---
 
 <p align="center">  A project on design the  of ERD(Entity-Relationship-Diagram) and tables to hold data from the CSVs, importing the CSVs into a SQL database, and analysisng the data. In other words, I will perform:
-
-Data Engineering  <br>
-&
-Data Analysis  <br>
-    <br> 
+  
 </p>
 
 ## 📝 Table of Contents
@@ -29,7 +24,7 @@ Data Analysis  <br>
 - [Team](#Team)
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Observed Trends](#trends)
+- [Bonus](#bonus)
 - [Acknowledgments](#acknowledgement)
 
 
@@ -55,30 +50,20 @@ Created tables in the correct order to handle foreign keys.Importe each CSV file
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 #### ERD - Diagram <br>
-<br>
-![ERD Diagram](EmployeeSQL/QuickDBD.PNG)
 
+![Comparison](EmployeeSQL/QuickDBD.PNG) <br>
 
-## ✍️ Observed Trends <a name = "trends"></a>
+ERD Diagram establishing the realtionship between the tables. <br>
 
-![Happiness Ranking 2015-2019](Output/ranking.png)
-* The world’s happiest countries are primarily in North Western Europe, North America, and Australia & New Zealand. 
-
-* Economy (GDP per capita) is the most important factor in evaluating a country’s happiness.
-
-
-![Correaltion_Heatmap](Output/2019_Heatmap.png)
-
-
-### Bonus Part -Importing the SQL database into Pandas.
+## Bonus Part -Importing the SQL database into Pandas. <a name = "bonus"></a>
 
 ![Comparison](EmployeeSQL/avgsallarytitle.png) <br>
 
-histogram to visualize the most common salary ranges for employees.<br>
+Histogram to visualize the most common salary ranges for employees.<br>
 
 ![Suicid Rate Comparison Aus vs Finland](EmployeeSQL/salarydist.png) <br>
 
-Create a bar chart of average salary by title. <br>
+A bar chart of average salary by title. <br>
 
 ### Epilogue 
 You look down at your badge to see that your employee ID number is 499942.
