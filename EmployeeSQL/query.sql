@@ -1,75 +1,51 @@
--- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/Yb87F4
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+--List the following details of each employee: employee number, last name, first name, sex, and salary.
+select e.emp_no,e.last_name,e.first_name,e.sex,s.salary
+from employees e,salaries s
+where e.emp_no = s.emp_no
+order by e.emp_no
+
+--List first name, last name, and hire date for employees who were hired in 1986.
+SET DateStyle TO MDY;
+create view employees_view as
+select first_name,last_name,hire_date::date as hire_date
+from employees
+
+select * from employees_view
+where extract(year from hire_date) = 1986
+order by first_name,last_name
+
+--List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+create view manager_list as
+select * from employees where emp_title_id like 'm%'
 
 
-CREATE TABLE "Members" (
-    "Member_ID" INTEGER   NOT NULL,
-    "Gym_ID" INTEGER   NOT NULL,
-    "Trainer_ID" INTEGER   NOT NULL,
-    "First_Name" VARCHAR   NOT NULL,
-    "Last_Name" VARCHAR   NOT NULL,
-    "Address" VARCHAR   NOT NULL,
-    "CITY" VARCHAR   NOT NULL,
-    CONSTRAINT "pk_Members" PRIMARY KEY (
-        "Member_ID"
-     )
-);
+select e.emp_no,e.first_name,e.last_name,d.dept_name,d.dept_no
+from employees e,dept_manager dm,departments d
+where dm.emp_no = e.emp_no and dm.dept_no = d.dept_no
+order by e.emp_no
 
-insert into "Members" ("Member_ID","Gym_ID","Trainer_ID","First_Name","Last_Name","Address","CITY")
-values(1001,5001,2001,'bimal','prabha','gosnells','perth'),
-(1002,5001,2002,'divya','gs','gosnells','perth');
+--List the department of each employee with the following information: employee number, last name, first name, and department name.
+select e.emp_no,e.first_name,e.last_name,d.dept_name
+from employees e,dept_emp de,departments d
+where de.emp_no = e.emp_no and de.dept_no = d.dept_no
+order by e.emp_no
 
-CREATE TABLE "Gym" (
-    "Gym_ID" INTEGER   NOT NULL,
-    "Gym_Name" VARCHAR   NOT NULL,
-    "Address" VARCHAR   NOT NULL,
-    "City" VARCHAR   NOT NULL,
-    "Zipcode" VARCHAR   NOT NULL,
-    CONSTRAINT "pk_Gym" PRIMARY KEY (
-        "Gym_ID"
-     )
-);
+--List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
-insert into "Gym" ("Gym_ID","Gym_Name","Address", "City","Zipcode")
-	values(5001,'Goodlife','Cannington','Perth','6100')
+select first_name,last_name,sex from employees where first_name like 'Hercules%' and last_name like 'B%'
+
+--List all employees in the Sales department, including their employee number, last name, first name, and department name.
+select e.emp_no,e.first_name,e.last_name,d.dept_name
+from employees e,dept_emp de,departments d
+where de.emp_no = e.emp_no and de.dept_no = d.dept_no and d.dept_name = 'Sales'
+order by e.emp_no
+
+--In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+select last_name,count(last_name) as Last_Name_Frequency from employees 
+group by last_name
+order by Last_Name_Frequency desc
 
 
 
-CREATE TABLE "Trainers" (
-    "Trainer_ID" INTEGER   NOT NULL,
-    "Gym_ID" INTEGER   NOT NULL,
-    "First_Name" VARCHAR   NOT NULL,
-    "Last_Name" VARCHAR   NOT NULL,
-    CONSTRAINT "pk_Trainers" PRIMARY KEY (
-        "Trainer_ID"
-     )
-);
 
-insert into "Trainers" ("Trainer_ID","Gym_ID","First_Name", "Last_Name"
-					   
-					   )
-	values(5001,'Goodlife','Cannington','Perth','6100')
-
-CREATE TABLE "Payments" (
-    "Payment_ID" INTEGER   NOT NULL,
-    "Member_ID" INTEGER   NOT NULL,
-    "CreditCard_Info" INTEGER   NOT NULL,
-    "Billing_Zip" INTEGER   NOT NULL,
-    CONSTRAINT "pk_Payments" PRIMARY KEY (
-        "Payment_ID"
-     )
-);
-
-ALTER TABLE "Members" ADD CONSTRAINT "fk_Members_Gym_ID" FOREIGN KEY("Gym_ID")
-REFERENCES "Gym" ("Gym_ID");
-
-ALTER TABLE "Members" ADD CONSTRAINT "fk_Members_Trainer_ID" FOREIGN KEY("Trainer_ID")
-REFERENCES "Trainers" ("Trainer_ID");
-
-ALTER TABLE "Trainers" ADD CONSTRAINT "fk_Trainers_Gym_ID" FOREIGN KEY("Gym_ID")
-REFERENCES "Gym" ("Gym_ID");
-
-ALTER TABLE "Payments" ADD CONSTRAINT "fk_Payments_Member_ID" FOREIGN KEY("Member_ID")
-REFERENCES "Members" ("Member_ID");
 
