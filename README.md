@@ -66,7 +66,10 @@ Histogram to visualize the most common salary ranges for employees.<br>
 A bar chart of average salary by title. <br>
 
 ### Epilogue 
-You look down at your badge to see that your employee ID number is 499942.
+I look down at my badge to see that my employee ID number is 499942.
+It shows the first and last name april foolsday.I have been tricked.
+
+![Employee-499942](EmployeeSQL/emp.png) <br>
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 - UWA Data Science
