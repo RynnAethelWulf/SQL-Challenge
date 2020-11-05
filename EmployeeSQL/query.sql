@@ -57,7 +57,10 @@ select last_name,count(last_name) as Last_Name_Frequency from employees
 group by last_name
 order by Last_Name_Frequency desc
 
-
-
+-- Bonus query for emp = 499942
+select e.emp_no,e.first_name,e.last_name,e.sex,d.dept_name,t.title,s.salary
+from employees e,dept_emp de,departments d,titles t,salaries s
+where de.emp_no = e.emp_no and de.dept_no = d.dept_no and e.emp_title_id = t.title_id and e.emp_no= s.emp_no and e.emp_no = 499942
+order by e.emp_no
 
 
