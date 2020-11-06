@@ -48,12 +48,19 @@ from employees e,dept_emp de,departments d
 where de.emp_no = e.emp_no and de.dept_no = d.dept_no and d.dept_name = 'Sales'
 order by e.emp_no
 
+--7) List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+select e.emp_no,e.first_name,e.last_name,d.dept_name
+from employees e,dept_emp de,departments d
+where de.emp_no = e.emp_no and de.dept_no = d.dept_no and d.dept_name in ('Sales','Development')
+order by e.emp_no
 
 
---7) In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+--8) In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 select last_name,count(last_name) as Last_Name_Frequency from employees 
 group by last_name
 order by Last_Name_Frequency desc
+
+
 
 -- Bonus query for emp = 499942
 select e.emp_no,e.first_name,e.last_name,e.sex,d.dept_name,t.title,s.salary
