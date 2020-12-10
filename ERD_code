@@ -1,0 +1,27 @@
+games
+-
+games_id int PK
+games_name varchar
+games_slug varchar
+released varchar
+rating decimal
+ratings_count int
+playtime int
+platform varchar
+platform_id int FK >- platforms.platform_id
+genres varchar
+stores_id int FK >- stores.store_id
+
+stores
+-
+store_id int  pk
+slug_name varchar
+store_name varchar
+total_games int
+domain varchar
+
+platforms
+-
+platform_id int pk
+platform varchar
+games_count int
