@@ -21,7 +21,6 @@
 
 ## 📝 Table of Contents
 
-- [Team](#Team)
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Bonus](#bonus)
